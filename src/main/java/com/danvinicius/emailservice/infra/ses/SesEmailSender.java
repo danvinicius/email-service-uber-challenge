@@ -35,6 +35,7 @@ public class SesEmailSender implements EmailSenderGateway {
         try {
             this.amazonSimpleEmailService.sendEmail(request);
         } catch (AmazonServiceException error) {
+            System.out.println(error);
             throw new EmailServiceException("Failure while sending e-mail", error);
         }
 
