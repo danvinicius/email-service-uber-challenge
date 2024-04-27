@@ -1,5 +1,5 @@
 ## About
-API built using Java, Java Spring and AWS Simple Email Service for the Uber Email Service Backend Challenge.<br/>
+API built using Java, Java Spring and AWS Simple Email Service for the [Uber Email Service Backend Challenge](https://github.com/uber-archive/coding-challenge-tools/blob/master/coding_challenge.md).<br/>
 The aim of this project is to practice Java and Spring Framework with Clean Architecture concepts. 
 
 <div style="display: inline_block">
