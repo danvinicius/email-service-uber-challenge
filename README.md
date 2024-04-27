@@ -11,7 +11,7 @@ The aim of this project is to practice Java and Spring Framework with Clean Arch
 
 ## E-mail service Uber challenge
 <h4> 
-    🚧 Under development... 🚧
+    🚧 Under development 🚧
 </h4>
 <br/>
 
@@ -40,7 +40,7 @@ aws.secretKey=111111
 
 ## Endpoints
 
-### 1. Sends and e-mail to someone
+### 1. Sends an e-mail to someone
 
 #### Endpoint: POST /api/email
 
