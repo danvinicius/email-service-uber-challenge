@@ -1,6 +1,7 @@
 package com.danvinicius.emailservice.infra.ses;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.amazonaws.AmazonServiceException;
@@ -18,6 +19,9 @@ public class SesEmailSender implements EmailSenderGateway {
 
     private final AmazonSimpleEmailService amazonSimpleEmailService;
 
+    @Value("${api.email.request.sourceEmail}")
+    private String sourceEmail;
+
     @Autowired
     public SesEmailSender(AmazonSimpleEmailService amazonSimpleEmailService) {
         this.amazonSimpleEmailService = amazonSimpleEmailService;
@@ -26,7 +30,7 @@ public class SesEmailSender implements EmailSenderGateway {
     @Override
     public void sendEmail(String to, String subject, String body) {
         SendEmailRequest request = new SendEmailRequest();
-        request.withSource("viniccius774@gmail.com")
+        request.withSource(sourceEmail)
         .withDestination(new Destination().withToAddresses(to))
         .withMessage(new Message()
             .withSubject(new Content(subject))
