@@ -28,15 +28,20 @@ git clone https://github.com/danvinicius/email-service-uber-challenge.git
 3. Update `application.properties` puting your AWS Credentials
 
 ```yaml
+spring.application.name=email-service
+server.port=8081
+
 aws.region=us-east-1
 aws.accessKeyId=1111111
 aws.secretKey=111111
+
+api.email.request.sourceEmail=your-source-email
 ```
 
 ## Usage
 
 1. Start the application with Maven
-2. The API will be accessible at http://localhost:8080
+2. The API will be accessible at http://localhost:8081
 
 ## Endpoints
 
